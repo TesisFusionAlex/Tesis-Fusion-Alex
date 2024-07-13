@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Bien Estructurada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Estilos para el header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        /* Estilos para la sección Hero */
+        .hero {
+            background-color: #007bff;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #ff9800;
+        }
+
+        /* Estilos para la sección de dos columnas */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .column:first-child {
+            max-width: 50%;
+        }
+
+        .column img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .column h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .column p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .column a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .column a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para la sección de galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        footer .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        footer .footer-section .logo img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section .social div {
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .footer-section .social div a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        footer .footer-section .social div a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para los botones de contacto */
+        .btn-contact {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .btn-contact:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para la sección Perfil */
+        .profile {
+            font-family: 'Roboto', serif;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .profile h3 {
+            font-size: 1.4em;
+        }
+
+        .profile ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .profile ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.pinimg.com/236x/97/fe/8d/97fe8d4098d64b3470f1600b001515bd--minimal-logo-simple-logos.jpg" alt="Logo de la Empresa">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#profile">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>TesisFusionAlex</h1>
+        <p>¡Bienvenido a TesisFusionAlex, tu destino para tesis académicas de calidad! Nos especializamos en fusionar creatividad, rigor estadístico y experiencia para crear proyectos académicos que brillan.</p>
+        <a href="#profile">Trabajos</a>
+    </section>
+
+    <section id="services" class="section">
+        <div class="column">
+            <img src="https://tutesisenlinea.com/public/images/services/Imagenes_nuevas/image-3.jpg" alt="Imagen 1">
+        </div>
+        <div class="column">
+            <h2>Asistencias</h2>
+            <p>Ofrecemos una asesoría personalizada que guía cada paso de tu proyecto desde la concepción hasta la presentación final, respaldada por un análisis estadístico utilizando herramientas y métodos sólidos. Además, garantizamos la calidad y originalidad de tu tesis mediante una redacción y edición profesional que cumple con los estándares más exigentes. Nos aseguramos de que tu trabajo se ajuste a las normativas académicas requeridas, preparándote para hacer realidad tu proyecto académico y comenzar tu viaje hacia el éxito con TesisFusionAlex.</p>
+            <a href="https://alexlazacoh.wixsite.com/misitio" target="_blank">Ver más</a>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <img src="https://static.wixstatic.com/media/73d25a_e3ba36045549429d95e3cde9a0ee4fbe~mv2.jpg" alt="Imagen 1">
+        <img src="https://static.wixstatic.com/media/73d25a_6249695ebaa04f43ab0260dd7d185c4a~mv2.jpg" alt="Imagen 2">
+        <img src="https://static.wixstatic.com/media/73d25a_0cf9430ada2b45a493ac4d65dd865f2e~mv2.jpg" alt="Imagen 3">
+        <img src="https://static.wixstatic.com/media/73d25a_07a1d81ca2d14beca00bc08afed0e64c~mv2.jpg" alt="Imagen 4">
+        <img src="https://static.wixstatic.com/media/73d25a_8cd7567fc7b645c69fa31bdbafb13bed~mv2.png" alt="Imagen 5">
+        <img src="https://walac.pe/wp-content/uploads/2020/07/senati-recibe-galardon-por-tecnologia-cisco-1068x713.jpg" alt="Imagen 6">
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <div class="logo">
+                <img src="https://i.pinimg.com/236x/97/fe/8d/97fe8d4098d64b3470f1600b001515bd--minimal-logo-simple-logos.jpg" alt="Logo de la Empresa">
+            </div>
+        </div>
+        <div class="footer-section services">
+            <h3>Productos</h3>
+            <ul>
+                <li>Asesorias personalizadas</li>
+                <li>Trabajos académicos e investigación</li>
+                <li>Revisión de similitud y parafraseo</li>
+                <li>Levantamiento de observaciones</li>
+                <li>Monografías</li>
+                <li>Normas APA e ISO</li>
+            </ul>
+        </div>
+        <div class="footer-section legal">
+            <h3>Programas</h3>
+            <ul>
+                <li>SPSS.24</li>
+                <li>SPSS AMOS</li>
+                <li>ATLAS.TI</li>
+                <li>MINITAB</li>
+                <li>AutoCad</li>
+                <li>OFFICE</li>
+            </ul>
+        </div>
+        <div class="footer-section institutions">
+            <h3>Instituciones</h3>
+            <ul>
+                <li>Universidad Nacional</li>
+                <li>Universidad Privadas</li>
+                <li>Instituto Superior</li>
+                <li>Institutos Técnico</li>
+                <li>Institutos Deportivos</li>
+                <li>Institutos Cristianos</li>
+            </ul>
+        </div>
+        <div class="footer-section profile" id="profile">
+            <h3>Perfil</h3>
+            <ul>
+                <li>
+                    Mi experiencia como Ingeniero Industrial y Consultor me permite ofrecer apoyo integral en proyectos académicos y profesionales, promoviendo la excelencia en la investigación y la educación para ayudar a otros a alcanzar sus objetivos.</li>
+            </ul>
+        </div>
+        <div class="footer-section contact" id="contact">
+            <h3>Contáctenos</h3>
+            <ul>
+                <li><a href="mailto:alexlazacoh@gmail.com" class="btn-contact">Email: alexlazacoh@gmail.com</a></li>
+                <li><a href="tel:+51923197887" class="btn-contact">Teléfono: 923 197 887</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=51923197887" class="btn-contact">WhatsApp</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
